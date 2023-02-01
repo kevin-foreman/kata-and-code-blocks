@@ -3,3 +3,4 @@ let fun = function(input) {
 };
 
 fun('hi');
+console.log('hello world')
