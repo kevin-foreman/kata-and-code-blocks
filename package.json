@@ -1,0 +1,22 @@
+{
+  "name": "kata-and-code-blocks",
+  "version": "1.4.0",
+  "description": "Kata and Code Blocks to Keep You Sharp",
+  "main": "app.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kevin-foreman/kata-and-code-blocks.git"
+  },
+  "keywords": [
+    "KATA"
+  ],
+  "author": "Kevin Foreman",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kevin-foreman/kata-and-code-blocks/issues"
+  },
+  "homepage": "https://github.com/kevin-foreman/kata-and-code-blocks#readme"
+}

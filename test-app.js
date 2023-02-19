@@ -1,29 +1,7 @@
-function fizzBuzzArray(input) {
+const colors = require('colors/safe');
 
-  let fizzArr = [];
-
-  for(let i = 1; i <= input; i++) {
-
-    if(i % 3 === 0 && i % 5 === 0) {
-
-      fizzArr.push('fizzBuzz');
-
-    } else if(i % 3 === 0) {
-
-      fizzArr.push('fizz');
-
-    } else if(i % 5 === 0) {
-
-      fizzArr.push('buzz');
-
-    } else {
-      fizzArr.push(i);
-    }
-
-  }
-
-  return fizzArr;
-
-};
-
-console.log(fizzBuzzArray(15));
+console.log(colors.green('hello')); // outputs green text
+console.log(colors.red.underline('i like cake and pies')) // outputs red underlined text
+console.log(colors.inverse('inverse the color')); // inverses the color
+console.log(colors.rainbow('OMG Rainbows!')); // rainbow
+console.log(colors.trap('Run the trap')); // Drops the bass
