@@ -11,16 +11,37 @@ Explanation: The longest consecutive elements sequence is [1, 2, 3, 4]. Therefor
 */
 
 
-var longestConsecutive = function(nums) {
-    let mappedArr = nums.map((element) => {
-        // console.log(mappedArr);
-        if (element >= 0) {
-            // mappedArr.push(element);
-            // console.log(mappedArr);
-        }
-        console.log(element > 1);
+var longestConsecutive = function (nums) {
 
+    let mySet = new Set(nums);
+    // console.log(mySet);
+    // console.log(mySet.size);
+    let chunks = [];
+
+    let previousNum = 0;
+
+    nums.forEach((currentNum) => {
+        // Checking the value of the numbers in comparison with each other
+        // If the difference isn't exactly 1, they are not consecutive
+        if (currentNum - previousNum != 1) {
+            chunks.push([]);
+            // console.log(chunks);
+            // Add the number to the current chunk
+            chunks[chunks.length - 1].push(currentNum);
+            // Moving to the next number in the array
+            previousNum = currentNum;
+            // console.log(chunks[0]);
+        };
     });
+
+    // Sort the chunks, based on their length
+    chunks.sort((a, b) => {
+        a.length - b.length
+    });
+    // console.log(chunks.length);
+    // console.log(chunks[0]);
+    return chunks.length;
+
 };
 
 // Test code to run
