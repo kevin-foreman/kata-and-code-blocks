@@ -68,7 +68,7 @@ let memoizedFibonacci = function (n, memo = {}) {
     return memo[n];
 };
 
-let n = 100;
+let n = 6;
 let startTime = performance.now();
 let result = memoizedFibonacci(n);
 let endTime = performance.now();
@@ -76,4 +76,3 @@ let timeTaken = endTime - startTime;
 
 console.log(`The ${n}th Fibonacci number is: ${result}`);
 console.log(`Time taken: ${timeTaken.toFixed(4)} milliseconds`);
-
