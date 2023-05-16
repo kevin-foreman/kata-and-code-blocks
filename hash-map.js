@@ -99,4 +99,28 @@ class HashMap {
         // If the key is not found, return null
         return null;
     }
-}
+};
+
+// Create a new hash map
+const hashMap = new HashMap();
+
+// Insert key-value pairs
+hashMap.insert('one', 1);
+hashMap.insert('two', 2);
+hashMap.insert('three', 3);
+
+// Search for values by key
+console.log(`Search for 'one': ${hashMap.search('one')}`); // Output: 1
+console.log(`Search for 'two': ${hashMap.search('two')}`); // Output: 2
+console.log(`Search for 'three': ${hashMap.search('three')}`); // Output: 3
+
+// Update a value
+hashMap.insert('one', 11);
+console.log(`Search for 'one' after update: ${hashMap.search('one')}`); // Output: 11
+
+// Delete a key-value pair
+hashMap.delete('two');
+console.log(`Search for 'two' after delete: ${hashMap.search('two')}`); // Output: null
+
+// Search for a non-existent key
+console.log(`Search for 'four': ${hashMap.search('four')}`); // Output: null
