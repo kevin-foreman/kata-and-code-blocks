@@ -1,6 +1,7 @@
 // The alphabet cipher was published by Lewis Carroll in 1868
 // It is based on a Vigenere cipher, a well-known scheme in cryptography
-function caesarCipherEncrypt(message, shift) {
+// The primary function takes in a string or 'message' and a 'shift' parameter
+function alphabetCipher(message, shift) {
     const alphabet = 'abcdefghijklmnopqrstuvwxyz';
     const messageLowerCase = message.toLowerCase();
   
@@ -27,7 +28,11 @@ function caesarCipherEncrypt(message, shift) {
   }
   
   // Example usage:
-  const plaintext = 'hello world';
-  const shift = 3;
-  const encryptedMessage = caesarCipherEncrypt(plaintext, shift);
-  console.log('Encrypted Message:', encryptedMessage); // Output: khoor zruog
+  let message1 = 'hello world';
+  let message2 = 'khoor zruog'
+  let shift1 = 3;
+  let shift2 = -3;
+  const encryptedMessage1 = alphabetCipher(message1, shift1);
+  console.log('Encrypted Message:', encryptedMessage1); // Output: khoor zruog
+  const encryptedMessage2 = alphabetCipher(message2, shift2);
+  console.log('Encrypted Message:', encryptedMessage2); // Output: hello world
